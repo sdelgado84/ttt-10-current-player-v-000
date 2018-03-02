@@ -1,13 +1,10 @@
-def turn_count(turn)
-  #counter = 1
-  move_count = []
-  turn.each do |unit|
-    #counter = 0
-    if unit == "X" || unit == "O"
-      #puts "spot taken"
-      move_count.push(1)
-    #else
-      #puts "spot free"
-      #counter += 1
+def turn_count(board)
+  counter = 0
+  board.each do |token|
+    if token == "X" || token == "O"
+      counter += 1
     end
   end
+  counter
+end
+
